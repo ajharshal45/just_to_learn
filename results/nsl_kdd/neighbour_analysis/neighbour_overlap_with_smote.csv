@@ -1,0 +1,5 @@
+method,mean_jaccard_with_SMOTE_neighbours,seeds_with_identical_neighbours
+SMOTE,1,1
+Borderline-SMOTE,1,1
+SHAP-Filtered SMOTE,0.511431,0.385474
+SHAP-Weighted SMOTE,0.499274,0.283242

@@ -1,0 +1,119 @@
+\begin{table}[htbp]
+\centering
+\caption{Empirical Benchmark of Explainability-Aware vs. Classical Oversamplers under Zero Leakage.}
+\label{tab:empirical_benchmarks}
+\begin{tabular}{lllllll}
+\toprule
+Oversampler & Classifier & PR-AUC & ROC-AUC & F1-Score & ECE $\downarrow$ & Kendall $\tau$ \\
+\midrule
+Raw (No Balancing) & logistic_regression & 0.3852 & 0.8342 & 0.2239 & 0.0282 & 0.6126 \\
+Raw (No Balancing) & random_forest & 0.5463 & 0.8607 & 0.1615 & 0.0236 & 0.6884 \\
+Raw (No Balancing) & xgboost & 0.5284 & 0.8808 & 0.3117 & 0.0284 & 0.0000 \\
+Random Oversampling (ROS) & logistic_regression & 0.3413 & 0.8261 & 0.2487 & 0.2309 & 0.5347 \\
+Random Oversampling (ROS) & random_forest & 0.4362 & 0.8722 & 0.3613 & 0.1035 & 0.6211 \\
+Random Oversampling (ROS) & xgboost & 0.5238 & 0.8773 & 0.4512 & 0.0272 & 0.0000 \\
+Standard SMOTE & logistic_regression & 0.3579 & 0.8210 & 0.2564 & 0.2119 & 0.4716 \\
+Standard SMOTE & random_forest & 0.3765 & 0.8758 & 0.4059 & 0.1494 & 0.6589 \\
+Standard SMOTE & xgboost & 0.5359 & 0.8842 & 0.5239 & 0.0390 & 0.0000 \\
+Borderline-SMOTE & logistic_regression & 0.3566 & 0.8433 & 0.3077 & 0.1453 & 0.5663 \\
+Borderline-SMOTE & random_forest & 0.4518 & 0.8923 & 0.4537 & 0.0993 & 0.6611 \\
+Borderline-SMOTE & xgboost & 0.5915 & 0.8920 & 0.4985 & 0.0374 & 0.0000 \\
+ADASYN & logistic_regression & 0.3368 & 0.8179 & 0.2379 & 0.2170 & 0.4947 \\
+ADASYN & random_forest & 0.3843 & 0.8670 & 0.3875 & 0.1536 & 0.6505 \\
+ADASYN & xgboost & 0.5345 & 0.8870 & 0.4838 & 0.0455 & 0.0000 \\
+SMOTE-ENN & logistic_regression & 0.3510 & 0.8159 & 0.2505 & 0.2476 & 0.4463 \\
+SMOTE-ENN & random_forest & 0.3626 & 0.8658 & 0.3601 & 0.1852 & 0.6105 \\
+SMOTE-ENN & xgboost & 0.5386 & 0.8839 & 0.4392 & 0.0842 & 0.0000 \\
+SMOTE-Tomek & logistic_regression & 0.3579 & 0.8210 & 0.2564 & 0.2119 & 0.4716 \\
+SMOTE-Tomek & random_forest & 0.3765 & 0.8758 & 0.4059 & 0.1494 & 0.6589 \\
+SMOTE-Tomek & xgboost & 0.5359 & 0.8842 & 0.5239 & 0.0390 & 0.0000 \\
+SHAP-Filtered SMOTE & logistic_regression & 0.3613 & 0.8281 & 0.2574 & 0.2059 & 0.4926 \\
+SHAP-Filtered SMOTE & random_forest & 0.4187 & 0.8818 & 0.4156 & 0.1501 & 0.6063 \\
+SHAP-Filtered SMOTE & xgboost & 0.5398 & 0.8899 & 0.5114 & 0.0427 & 0.0000 \\
+SHAP-Weighted MASV-SMOTE & logistic_regression & 0.3597 & 0.8261 & 0.2505 & 0.2108 & 0.4884 \\
+SHAP-Weighted MASV-SMOTE & random_forest & 0.4104 & 0.8741 & 0.4078 & 0.1448 & 0.6505 \\
+SHAP-Weighted MASV-SMOTE & xgboost & 0.5493 & 0.8859 & 0.4889 & 0.0431 & 0.0000 \\
+Raw (No Balancing) & logistic_regression & 0.9626 & 0.9937 & 0.9048 & 0.0296 & 0.4989 \\
+Raw (No Balancing) & random_forest & 0.9469 & 0.9755 & 0.8743 & 0.0273 & 0.7453 \\
+Raw (No Balancing) & xgboost & 0.9552 & 0.9912 & 0.8762 & 0.0234 & 0.0000 \\
+Random Oversampling (ROS) & logistic_regression & 0.9643 & 0.9947 & 0.8569 & 0.0471 & 0.4032 \\
+Random Oversampling (ROS) & random_forest & 0.9505 & 0.9902 & 0.8779 & 0.0288 & 0.7425 \\
+Random Oversampling (ROS) & xgboost & 0.9499 & 0.9905 & 0.8614 & 0.0288 & 0.0000 \\
+Standard SMOTE & logistic_regression & 0.9646 & 0.9947 & 0.8978 & 0.0401 & 0.4170 \\
+Standard SMOTE & random_forest & 0.9470 & 0.9877 & 0.8595 & 0.0386 & 0.7582 \\
+Standard SMOTE & xgboost & 0.9485 & 0.9898 & 0.8730 & 0.0254 & 0.0000 \\
+Borderline-SMOTE & logistic_regression & 0.9502 & 0.9916 & 0.8237 & 0.0510 & 0.3683 \\
+Borderline-SMOTE & random_forest & 0.9380 & 0.9870 & 0.8175 & 0.0464 & 0.7057 \\
+Borderline-SMOTE & xgboost & 0.9525 & 0.9912 & 0.8422 & 0.0320 & 0.0000 \\
+ADASYN & logistic_regression & 0.9661 & 0.9951 & 0.8569 & 0.0490 & 0.4087 \\
+ADASYN & random_forest & 0.9332 & 0.9866 & 0.8294 & 0.0440 & 0.7701 \\
+ADASYN & xgboost & 0.9376 & 0.9859 & 0.8583 & 0.0310 & 0.0000 \\
+SMOTE-ENN & logistic_regression & 0.9585 & 0.9933 & 0.8480 & 0.0504 & 0.3894 \\
+SMOTE-ENN & random_forest & 0.9374 & 0.9766 & 0.8319 & 0.0449 & 0.7628 \\
+SMOTE-ENN & xgboost & 0.9527 & 0.9898 & 0.8579 & 0.0339 & 0.0000 \\
+SMOTE-Tomek & logistic_regression & 0.9646 & 0.9947 & 0.8978 & 0.0401 & 0.4170 \\
+SMOTE-Tomek & random_forest & 0.9470 & 0.9877 & 0.8595 & 0.0386 & 0.7582 \\
+SMOTE-Tomek & xgboost & 0.9485 & 0.9898 & 0.8730 & 0.0254 & 0.0000 \\
+SHAP-Filtered SMOTE & logistic_regression & 0.9668 & 0.9951 & 0.8905 & 0.0417 & 0.3995 \\
+SHAP-Filtered SMOTE & random_forest & 0.9527 & 0.9916 & 0.8461 & 0.0366 & 0.7563 \\
+SHAP-Filtered SMOTE & xgboost & 0.9455 & 0.9898 & 0.8630 & 0.0319 & 0.0000 \\
+SHAP-Weighted MASV-SMOTE & logistic_regression & 0.9668 & 0.9951 & 0.9244 & 0.0463 & 0.3995 \\
+SHAP-Weighted MASV-SMOTE & random_forest & 0.9466 & 0.9891 & 0.8645 & 0.0351 & 0.7517 \\
+SHAP-Weighted MASV-SMOTE & xgboost & 0.9485 & 0.9905 & 0.8730 & 0.0295 & 0.0000 \\
+Raw (No Balancing) & logistic_regression & 0.1736 & 0.4759 & 0.0444 & 0.0053 & 0.2698 \\
+Raw (No Balancing) & random_forest & 0.9708 & 0.9992 & 0.7934 & 0.0139 & 0.5799 \\
+Raw (No Balancing) & xgboost & 0.9808 & 0.9994 & 0.8372 & 0.0059 & 0.0000 \\
+Random Oversampling (ROS) & logistic_regression & 0.0626 & 0.4971 & 0.0561 & 0.2989 & 0.1386 \\
+Random Oversampling (ROS) & random_forest & 0.9402 & 0.9983 & 0.6010 & 0.0301 & 0.5640 \\
+Random Oversampling (ROS) & xgboost & 0.9865 & 0.9996 & 0.9289 & 0.0057 & 0.0000 \\
+Standard SMOTE & logistic_regression & 0.0915 & 0.5010 & 0.0683 & 0.2635 & 0.1884 \\
+Standard SMOTE & random_forest & 0.8756 & 0.9962 & 0.7686 & 0.0788 & 0.6063 \\
+Standard SMOTE & xgboost & 0.9762 & 0.9994 & 0.8836 & 0.0111 & 0.0000 \\
+Borderline-SMOTE & logistic_regression & 0.2497 & 0.5336 & 0.1644 & 0.0710 & 0.2593 \\
+Borderline-SMOTE & random_forest & 0.8814 & 0.9969 & 0.6436 & 0.0384 & 0.6360 \\
+Borderline-SMOTE & xgboost & 0.9332 & 0.9985 & 0.8301 & 0.0093 & 0.0000 \\
+ADASYN & logistic_regression & 0.0810 & 0.4989 & 0.0606 & 0.2618 & 0.1915 \\
+ADASYN & random_forest & 0.8964 & 0.9960 & 0.7373 & 0.0825 & 0.6021 \\
+ADASYN & xgboost & 0.9814 & 0.9996 & 0.8801 & 0.0104 & 0.0000 \\
+SMOTE-ENN & logistic_regression & 0.0926 & 0.5019 & 0.0683 & 0.2636 & 0.1926 \\
+SMOTE-ENN & random_forest & 0.8826 & 0.9952 & 0.7771 & 0.0797 & 0.6233 \\
+SMOTE-ENN & xgboost & 0.9780 & 0.9994 & 0.8704 & 0.0105 & 0.0000 \\
+SMOTE-Tomek & logistic_regression & 0.0915 & 0.5010 & 0.0683 & 0.2635 & 0.1884 \\
+SMOTE-Tomek & random_forest & 0.8756 & 0.9962 & 0.7686 & 0.0788 & 0.6063 \\
+SMOTE-Tomek & xgboost & 0.9762 & 0.9994 & 0.8836 & 0.0111 & 0.0000 \\
+SHAP-Filtered SMOTE & logistic_regression & 0.0853 & 0.4950 & 0.0635 & 0.2614 & 0.1831 \\
+SHAP-Filtered SMOTE & random_forest & 0.8762 & 0.9964 & 0.7663 & 0.0808 & 0.6000 \\
+SHAP-Filtered SMOTE & xgboost & 0.9649 & 0.9992 & 0.8657 & 0.0109 & 0.0000 \\
+SHAP-Weighted MASV-SMOTE & logistic_regression & 0.0832 & 0.4974 & 0.0595 & 0.2660 & 0.1862 \\
+SHAP-Weighted MASV-SMOTE & random_forest & 0.9040 & 0.9967 & 0.7644 & 0.0749 & 0.6138 \\
+SHAP-Weighted MASV-SMOTE & xgboost & 0.9738 & 0.9994 & 0.8994 & 0.0103 & 0.0000 \\
+Raw (No Balancing) & logistic_regression & 0.1559 & 0.6059 & 0.0000 & 0.0404 & 0.4071 \\
+Raw (No Balancing) & random_forest & 0.3273 & 0.7590 & 0.0000 & 0.0205 & 0.5072 \\
+Raw (No Balancing) & xgboost & 0.3719 & 0.8057 & 0.0952 & 0.0453 & 0.0000 \\
+Random Oversampling (ROS) & logistic_regression & 0.1357 & 0.6251 & 0.2023 & 0.3488 & 0.4602 \\
+Random Oversampling (ROS) & random_forest & 0.2445 & 0.7621 & 0.2600 & 0.2102 & 0.5516 \\
+Random Oversampling (ROS) & xgboost & 0.3703 & 0.8012 & 0.2870 & 0.0346 & 0.0000 \\
+Standard SMOTE & logistic_regression & 0.1333 & 0.6201 & 0.1970 & 0.3345 & 0.4461 \\
+Standard SMOTE & random_forest & 0.2154 & 0.7486 & 0.2455 & 0.2419 & 0.6020 \\
+Standard SMOTE & xgboost & 0.2598 & 0.7566 & 0.2819 & 0.0848 & 0.0000 \\
+Borderline-SMOTE & logistic_regression & 0.1403 & 0.6165 & 0.2036 & 0.3183 & 0.3634 \\
+Borderline-SMOTE & random_forest & 0.1896 & 0.7363 & 0.2689 & 0.2287 & 0.5758 \\
+Borderline-SMOTE & xgboost & 0.2700 & 0.7744 & 0.2877 & 0.0710 & 0.0000 \\
+ADASYN & logistic_regression & 0.1444 & 0.6254 & 0.1927 & 0.3357 & 0.4440 \\
+ADASYN & random_forest & 0.1910 & 0.7410 & 0.2678 & 0.2475 & 0.5570 \\
+ADASYN & xgboost & 0.2845 & 0.7877 & 0.2888 & 0.0871 & 0.0000 \\
+SMOTE-ENN & logistic_regression & 0.1344 & 0.6320 & 0.2105 & 0.4493 & 0.4669 \\
+SMOTE-ENN & random_forest & 0.2034 & 0.7371 & 0.2712 & 0.3615 & 0.6430 \\
+SMOTE-ENN & xgboost & 0.2435 & 0.7724 & 0.3293 & 0.2163 & 0.0000 \\
+SMOTE-Tomek & logistic_regression & 0.1333 & 0.6201 & 0.1970 & 0.3345 & 0.4461 \\
+SMOTE-Tomek & random_forest & 0.2154 & 0.7486 & 0.2455 & 0.2419 & 0.6020 \\
+SMOTE-Tomek & xgboost & 0.2598 & 0.7566 & 0.2819 & 0.0848 & 0.0000 \\
+SHAP-Filtered SMOTE & logistic_regression & 0.1437 & 0.6188 & 0.2084 & 0.3347 & 0.4017 \\
+SHAP-Filtered SMOTE & random_forest & 0.1982 & 0.7336 & 0.2621 & 0.2477 & 0.5025 \\
+SHAP-Filtered SMOTE & xgboost & 0.2672 & 0.7562 & 0.3057 & 0.0886 & 0.0000 \\
+SHAP-Weighted MASV-SMOTE & logistic_regression & 0.1443 & 0.6255 & 0.2034 & 0.3353 & 0.4050 \\
+SHAP-Weighted MASV-SMOTE & random_forest & 0.2115 & 0.7487 & 0.2940 & 0.2455 & 0.5771 \\
+SHAP-Weighted MASV-SMOTE & xgboost & 0.3019 & 0.7820 & 0.3111 & 0.0805 & 0.0000 \\
+\bottomrule
+\end{tabular}
+\end{table}

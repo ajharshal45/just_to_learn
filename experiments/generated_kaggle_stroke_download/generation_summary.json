@@ -1,0 +1,46 @@
+{
+  "source_file": "C:\\Users\\HP\\Downloads\\healthcare-dataset-stroke-data.csv",
+  "source_rows": 5109,
+  "feature_count": 15,
+  "feature_columns": [
+    "age",
+    "hypertension",
+    "heart_disease",
+    "avg_glucose_level",
+    "bmi",
+    "gender_Male",
+    "ever_married_Yes",
+    "work_type_Never_worked",
+    "work_type_Private",
+    "work_type_Self-employed",
+    "work_type_children",
+    "Residence_type_Urban",
+    "smoking_status_formerly smoked",
+    "smoking_status_never smoked",
+    "smoking_status_smokes"
+  ],
+  "original_class_counts": {
+    "0": 4860,
+    "1": 249
+  },
+  "outputs": {
+    "standard_smote": {
+      "path": "experiments\\generated_kaggle_stroke_download\\standard_smote_generated_dataset.csv",
+      "rows": 9720,
+      "synthetic_rows": 4611,
+      "class_counts": {
+        "0": 4860,
+        "1": 4860
+      }
+    },
+    "shap_weighted_smote": {
+      "path": "experiments\\generated_kaggle_stroke_download\\shap_weighted_smote_generated_dataset.csv",
+      "rows": 9720,
+      "synthetic_rows": 4611,
+      "class_counts": {
+        "0": 4860,
+        "1": 4860
+      }
+    }
+  }
+}

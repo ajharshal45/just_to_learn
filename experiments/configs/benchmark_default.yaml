@@ -1,0 +1,47 @@
+# Default Configuration for Reproducible Benchmarking Suite
+experiment_name: "shap_smote_full_benchmark"
+random_state: 42
+
+datasets:
+  - name: "synthetic"
+    n_samples: 600
+    n_features: 15
+    minority_ratio: 0.10
+  - name: "breast_cancer"
+    minority_ratio: 0.12
+  - name: "credit_fraud"
+    n_samples: 800
+    n_features: 20
+    minority_ratio: 0.05
+  - name: "nsl_kdd"
+    n_samples: 600
+    n_features: 20
+    minority_ratio: 0.08
+
+oversamplers:
+  - "Raw (No Balancing)"
+  - "Random Oversampling (ROS)"
+  - "Standard SMOTE"
+  - "Borderline-SMOTE"
+  - "ADASYN"
+  - "SMOTE-ENN"
+  - "SMOTE-Tomek"
+  - "SHAP-Filtered SMOTE"
+  - "SHAP-Weighted MASV-SMOTE"
+
+classifiers:
+  - "logistic_regression"
+  - "random_forest"
+  - "xgboost"
+
+cross_validation:
+  n_splits: 5
+  n_repeats: 1
+  scale_features: true
+
+output:
+  output_dir: "experiments/results"
+  save_csv: true
+  save_json: true
+  save_latex: true
+  save_plots: true

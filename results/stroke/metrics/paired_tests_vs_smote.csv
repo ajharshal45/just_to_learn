@@ -1,0 +1,61 @@
+model,method,vs,metric,mean_difference,folds_better,folds_worse,p_value
+Logistic Regression,No Sampling,SMOTE,PR-AUC,-0.000702308,5,5,0.921875
+Logistic Regression,No Sampling,SMOTE,F1,-0.225904,0,10,0.00195312
+Logistic Regression,No Sampling,SMOTE,Recall,-0.750711,0,10,0.00195312
+Logistic Regression,No Sampling,SMOTE,Precision,-0.133039,0,10,0.00195312
+Logistic Regression,Random Oversampling,SMOTE,PR-AUC,0.00175351,8,2,0.322266
+Logistic Regression,Random Oversampling,SMOTE,F1,0.00418773,5,4,0.570312
+Logistic Regression,Random Oversampling,SMOTE,Recall,0.0403983,7,1,0.0234375
+Logistic Regression,Random Oversampling,SMOTE,Precision,0.0016354,4,5,0.820312
+Logistic Regression,Borderline-SMOTE,SMOTE,PR-AUC,-0.000404417,5,5,1
+Logistic Regression,Borderline-SMOTE,SMOTE,F1,0.0100141,8,2,0.0371094
+Logistic Regression,Borderline-SMOTE,SMOTE,Recall,-0.0532717,0,9,0.00390625
+Logistic Regression,Borderline-SMOTE,SMOTE,Precision,0.009102,9,1,0.00976562
+Logistic Regression,SHAP-Filtered SMOTE,SMOTE,PR-AUC,0.00246553,5,5,0.845703
+Logistic Regression,SHAP-Filtered SMOTE,SMOTE,F1,-0.00256208,2,7,0.25
+Logistic Regression,SHAP-Filtered SMOTE,SMOTE,Recall,-7.11238e-05,2,3,1
+Logistic Regression,SHAP-Filtered SMOTE,SMOTE,Precision,-0.00175986,2,7,0.203125
+Logistic Regression,SHAP-Weighted SMOTE,SMOTE,PR-AUC,0.00147595,5,5,0.921875
+Logistic Regression,SHAP-Weighted SMOTE,SMOTE,F1,-0.00267375,2,7,0.0976562
+Logistic Regression,SHAP-Weighted SMOTE,SMOTE,Recall,0.0027027,2,1,0.75
+Logistic Regression,SHAP-Weighted SMOTE,SMOTE,Precision,-0.00193243,2,7,0.0976562
+Random Forest,No Sampling,SMOTE,PR-AUC,0.0307164,9,1,0.0136719
+Random Forest,No Sampling,SMOTE,F1,-0.204818,0,10,0.00195312
+Random Forest,No Sampling,SMOTE,Recall,-0.619417,0,10,0.00195312
+Random Forest,No Sampling,SMOTE,Precision,-0.122904,0,10,0.00195312
+Random Forest,Random Oversampling,SMOTE,PR-AUC,0.0125643,7,3,0.275391
+Random Forest,Random Oversampling,SMOTE,F1,0.00316483,4,6,0.695312
+Random Forest,Random Oversampling,SMOTE,Recall,0.144523,9,0,0.00390625
+Random Forest,Random Oversampling,SMOTE,Precision,-0.00234637,4,6,0.492188
+Random Forest,Borderline-SMOTE,SMOTE,PR-AUC,0.00746011,7,3,0.193359
+Random Forest,Borderline-SMOTE,SMOTE,F1,0.0105596,7,3,0.130859
+Random Forest,Borderline-SMOTE,SMOTE,Recall,-0.0819346,1,7,0.03125
+Random Forest,Borderline-SMOTE,SMOTE,Precision,0.0121443,8,2,0.0195312
+Random Forest,SHAP-Filtered SMOTE,SMOTE,PR-AUC,0.00174448,6,4,0.845703
+Random Forest,SHAP-Filtered SMOTE,SMOTE,F1,-0.0230286,3,7,0.160156
+Random Forest,SHAP-Filtered SMOTE,SMOTE,Recall,-0.386558,0,10,0.00195312
+Random Forest,SHAP-Filtered SMOTE,SMOTE,Precision,0.034994,7,3,0.0371094
+Random Forest,SHAP-Weighted SMOTE,SMOTE,PR-AUC,-0.00130136,6,4,1
+Random Forest,SHAP-Weighted SMOTE,SMOTE,F1,-0.0228878,1,9,0.0644531
+Random Forest,SHAP-Weighted SMOTE,SMOTE,Recall,-0.357397,0,10,0.00195312
+Random Forest,SHAP-Weighted SMOTE,SMOTE,Precision,0.0191961,7,3,0.0371094
+XGBoost,No Sampling,SMOTE,PR-AUC,0.0281321,9,1,0.00390625
+XGBoost,No Sampling,SMOTE,F1,-0.112455,0,10,0.00195312
+XGBoost,No Sampling,SMOTE,Recall,-0.168563,0,10,0.00195312
+XGBoost,No Sampling,SMOTE,Precision,0.0982897,6,4,0.160156
+XGBoost,Random Oversampling,SMOTE,PR-AUC,0.0204388,8,2,0.0273438
+XGBoost,Random Oversampling,SMOTE,F1,0.0618911,9,1,0.00390625
+XGBoost,Random Oversampling,SMOTE,Recall,0.272831,10,0,0.00195312
+XGBoost,Random Oversampling,SMOTE,Precision,0.00364693,5,5,0.769531
+XGBoost,Borderline-SMOTE,SMOTE,PR-AUC,0.00514456,6,4,0.322266
+XGBoost,Borderline-SMOTE,SMOTE,F1,-0.00153446,5,5,1
+XGBoost,Borderline-SMOTE,SMOTE,Recall,-0.000142248,5,4,0.925781
+XGBoost,Borderline-SMOTE,SMOTE,Precision,-0.00246546,6,4,1
+XGBoost,SHAP-Filtered SMOTE,SMOTE,PR-AUC,0.0117963,5,5,0.695312
+XGBoost,SHAP-Filtered SMOTE,SMOTE,F1,-0.0344552,3,7,0.130859
+XGBoost,SHAP-Filtered SMOTE,SMOTE,Recall,-0.0963727,0,10,0.00195312
+XGBoost,SHAP-Filtered SMOTE,SMOTE,Precision,0.0649856,6,4,0.193359
+XGBoost,SHAP-Weighted SMOTE,SMOTE,PR-AUC,0.0102692,7,3,0.232422
+XGBoost,SHAP-Weighted SMOTE,SMOTE,F1,-0.0646368,2,8,0.0371094
+XGBoost,SHAP-Weighted SMOTE,SMOTE,Recall,-0.128307,0,10,0.00195312
+XGBoost,SHAP-Weighted SMOTE,SMOTE,Precision,0.0566003,7,3,0.130859

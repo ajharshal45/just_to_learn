@@ -1,0 +1,12 @@
+Setting,Value
+Random seed,42
+Hold-out test size,"25% (stratified, untouched)"
+Cross-validation,2 x 5-fold stratified on the development set
+Oversampling target,1:1 minority:majority (sampling_strategy='auto')
+k neighbours (all SMOTE variants),5
+Borderline-SMOTE m neighbours,10
+SHAP-Filtered cumulative threshold,0.9
+SHAP preliminary model,"Random Forest, 50 trees, depth 5 (training fold only)"
+SHAP rows explained,"all rows up to 20,000; above that all minority + re-weighted uniform majority sample"
+Downstream models,"Logistic Regression, Random Forest, XGBoost"
+Decision threshold,0.5

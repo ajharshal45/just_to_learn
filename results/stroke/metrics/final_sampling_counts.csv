@@ -1,0 +1,7 @@
+method,real_majority,real_minority,synthetic_minority,final_majority,final_minority,sampling_seconds
+No Sampling,3645,187,0,3645,187,0.0061228
+Random Oversampling,3645,187,3458,3645,3645,1.38823
+SMOTE,3645,187,3458,3645,3645,0.186105
+Borderline-SMOTE,3645,187,3458,3645,3645,0.191726
+SHAP-Filtered SMOTE,3645,187,3458,3645,3645,2.40483
+SHAP-Weighted SMOTE,3645,187,3458,3645,3645,2.41214

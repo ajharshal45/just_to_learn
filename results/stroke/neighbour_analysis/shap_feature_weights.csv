@@ -1,0 +1,22 @@
+feature,rank,MASV,weight_w,cumulative_weight,sqrt_w_stretch_vs_uniform,kept_by_SHAP_Filtered
+age,1,0.0255399,0.419118,0.419118,2.96673,True
+avg_glucose_level,2,0.00778813,0.127806,0.546924,1.63827,True
+hypertension,3,0.0045135,0.074068,0.620992,1.24717,True
+heart_disease,4,0.00442756,0.0726577,0.69365,1.23524,True
+bmi,5,0.00317657,0.0521287,0.745779,1.04628,True
+ever_married=Yes,6,0.00298741,0.0490244,0.794803,1.01465,True
+ever_married=No,7,0.00287141,0.0471208,0.841924,0.994755,True
+work_type=Self-employed,8,0.001612,0.0264535,0.868377,0.745334,True
+smoking_status=formerly smoked,9,0.00159196,0.0261245,0.894502,0.740686,True
+smoking_status=Unknown,10,0.000950005,0.0155899,0.910092,0.572178,True
+smoking_status=never smoked,11,0.000874545,0.0143516,0.924443,0.548984,False
+work_type=Private,12,0.000853239,0.0140019,0.938445,0.542255,False
+work_type=children,13,0.000768523,0.0126117,0.951057,0.514632,False
+Residence_type=Urban,14,0.000694065,0.0113898,0.962447,0.489067,False
+gender=Female,15,0.000529036,0.00868166,0.971128,0.426984,False
+gender=Male,16,0.000514152,0.00843741,0.979566,0.420934,False
+Residence_type=Rural,17,0.000482827,0.00792336,0.987489,0.40791,False
+smoking_status=smokes,18,0.000466966,0.00766307,0.995152,0.401154,False
+work_type=Govt_job,19,0.000294912,0.0048396,0.999992,0.318797,False
+work_type=Never_worked,20,4.93599e-07,8.10012e-06,1,0.0130423,False
+gender=Other,21,0,0,1,0,False

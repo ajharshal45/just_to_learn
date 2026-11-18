@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shap-smote"
+version = "0.1.0"
+description = "Explainability-Aware Synthetic Oversampling for Imbalanced Tabular Classification"
+readme = "Ideas.md"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.24.0",
+    "scipy>=1.10.0",
+    "scikit-learn>=1.2.0",
+    "imbalanced-learn>=0.10.0",
+    "shap>=0.41.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "xgboost>=1.7.0",
+]

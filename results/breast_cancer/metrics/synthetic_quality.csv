@@ -1,0 +1,7 @@
+method,synthetic_rows,majority_share_in_5nn,synthetic_with_majority_nn1_%,mean_wasserstein_distance,max_wasserstein_distance,ks_test_pass_ratio,covariance_frobenius_dist,correlation_matrix_similarity,parents_SHAP_cosine_mean,distinct_parent_pairs,detectability_auc_all,detectability_auc_numeric
+Real minority (reference),0,0.22069,,,,,,,,,,
+Random Oversampling,239,0.16318,0,0.0594501,0.108031,1,2.75177,0.996053,,,,
+SMOTE,239,0.121339,0,0.186442,0.297885,1,14.8266,0.98207,0.835334,118,0.525809,0.525809
+Borderline-SMOTE,239,0.361506,5.02092,0.607397,1.51301,0.433333,31.3346,0.707993,0.700897,35,0.755607,0.755607
+SHAP-Filtered SMOTE,239,0.123849,0.41841,0.17477,0.284402,1,14.4818,0.978773,0.847322,118,0.517247,0.517247
+SHAP-Weighted SMOTE,239,0.128033,0.83682,0.179449,0.293382,1,14.6886,0.984337,0.858562,118,0.536197,0.536197
